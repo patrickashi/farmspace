@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Nunito, sans-serif;
+    background-color: #93b59f;
+}
+
+  
+/* In your CSS file */
+.clip-path-quadrilateral {
+    clip-path: polygon(
+        20% 0%, /* Top-left */
+        80% 0%, /* Top-right */
+        100% 100%, /* Bottom-right */
+        0% 100%  /* Bottom-left */
+    );
+    background-color: #1B2F27; /* Adjust background color as needed */
+    padding: 2rem; /* Adjust padding as needed */
+    color: white; /* Adjust text color as needed */
+}
+
+.clip-path-quadrilateral:hover {
+    background-color: #ADA4FF;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+  .custom-scrollbar {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;  /* For Firefox */
+  }
+
+  .hexagon-wrapper {
+    position: relative;
+    width: 200px; /* Adjust the width as needed */
+    height: 100%;
+    padding-bottom: 173.2px; /* Adjust the padding-bottom as needed */
+    margin: 10px 0; /* Adjust the margin as needed */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hexagon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      25% 0%, 
+      75% 0%, 
+      100% 50%, 
+      75% 100%, 
+      25% 100%, 
+      0% 50%
+    );
+    overflow: hidden;
+  }
+
+  .hexagon video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  @keyframes arrowAnimation {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .arrow {
+    position: fixed;
+    bottom: 120px; /* Adjust based on your layout */
+    right: 50px;  /* Adjust based on your layout */
+    animation: arrowAnimation 1s 3;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .arrow.visible {
+    opacity: 1;
+  }
+  
+  
