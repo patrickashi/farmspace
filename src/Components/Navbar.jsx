@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai"
 // import blackbullLogo from "../Assets/blackbullLogo.jpg"
 import farmspacelogo_bw from "../Assets/farmspacelogo_bw.png";
+import farmspacelogo_white from "../Assets/farmspacelogo_white.png";
 
 
 const  Navbar = ({ handleContactClick }) => {
@@ -21,7 +22,7 @@ const  Navbar = ({ handleContactClick }) => {
     return ( 
         <div className="flex justify-between items-center fixed top-0 left-0 right-0 z-50 py-2 bg-[#93b59f] px-2 md:px-6 text-white font-Montserrat ">
             <div>
-                <img className="w-28" src={farmspacelogo_bw} size={20} alt="logo" />
+                <img className="w-28" src={farmspacelogo_white} size={20} alt="logo" />
       
             </div>
             
